@@ -1,16 +1,28 @@
-import { Flex } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import logo from "../../public/logo.svg";
+import Logo from "../../public/logo.svg";
+import Airplane from "../../public/Airplane.svg";
 
 const Home: NextPage = () => {
   return (
-    <Flex direction='column'  >
-      <Flex align='center' justify='center'>
-        <Image alt="logo" src={logo} />
+    <Box >
+      <Flex align='center' justify='center' h="100px">
+        <Image alt="logo" src={Logo} />
       </Flex>
-      <Flex>
-        <h1>Banner</h1>
+      <Flex
+        backgroundImage="url('/Background.svg')"
+        backgroundPosition="center"
+        backgroundRepeat="no-repeat">
+        <Flex>
+          <h1>5 Continentes,
+            infinitas possibilidades.</h1>
+          <p>Chegou a hora de tirar do papel a viagem que você sempre sonhou. </p>
+        </Flex>
+        <Flex>
+          <Image alt="logo" src={Airplane} />
+        </Flex>
+
       </Flex>
       <Flex>
         <h1>infor</h1>
@@ -21,7 +33,7 @@ const Home: NextPage = () => {
       <Flex>
         <h1>Carrosel</h1>
       </Flex>
-    </Flex>
+    </Box>
   )
 }
 
