@@ -1,15 +1,12 @@
 import { Box, Flex } from '@chakra-ui/react';
 import type { NextPage } from 'next';
-import Image from 'next/image';
-import Logo from "../../public/logo.svg";
 import Banner from '../components/Banner';
+import Header from '../components/Header';
 
 const Home: NextPage = () => {
   return (
     <Box >
-      <Flex align='center' justify='center' h="100px">
-        <Image alt="logo" src={Logo} />
-      </Flex>
+      <Header />
       <Banner />
       <Flex>
         <h1>infor</h1>
