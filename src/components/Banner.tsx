@@ -1,23 +1,29 @@
-import {  Box, Flex } from '@chakra-ui/react';
+import { Box, Text, SimpleGrid } from '@chakra-ui/react';
 import Image from 'next/image';
 import Airplane from "../../public/Airplane.svg";
 
 export default function Banner(): JSX.Element {
   return (
-      <Flex
-        backgroundImage="url('/Background.svg')"
-        backgroundRepeat="no-repeat"
-        backgroundSize="cover"
-        flexDir='row'
-                >
-        <Box>
-          <h1>5 Continentes,
-            infinitas possibilidades.</h1>
-          <p>Chegou a hora de tirar do papel a viagem que você sempre sonhou. </p>
-        </Box>
-        <Box>
-          <Image alt="logo" src={Airplane} />
-        </Box>
-      </Flex>
+    <SimpleGrid
+      backgroundImage="url('/Background.svg')"
+      backgroundRepeat="no-repeat"
+      backgroundSize="cover"
+      flexDir='row'
+      w="100%"
+      columns={2} 
+      spacing={10}
+      paddingLeft={8}
+      paddingRight={8}
+      color="white.50"
+    >
+      <Box>
+      <Text fontWeight="bold" fontSize={"3xl"} >5 Continentes,
+          infinitas possibilidades.</Text>
+        <p>Chegou a hora de tirar do papel a viagem que você sempre sonhou. </p>
+      </Box>
+      <Box alignItems="center">
+        <Image alt="airplane" src={Airplane} />
+      </Box>
+    </SimpleGrid >
   )
 }
