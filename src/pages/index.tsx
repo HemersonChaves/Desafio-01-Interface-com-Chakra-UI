@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Text } from '@chakra-ui/react';
+import { Center, Flex, Text } from '@chakra-ui/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import type { NextPage } from 'next';
