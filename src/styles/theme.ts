@@ -6,10 +6,16 @@ export const theme = extendTheme({
       "50": "#F5F8FA"
     },
     gray: {
-      "700": "#47585B"
+      "700": "#47585B",
+      "500": "#999999",
+      "400": "rgba(153, 153, 153, 0.5)",
+      "300": "#DADADA",
+      "50": "#F5F8FA"
     },
     yellow: {
-      "700": "#FFBA08"
+      "400": "#FFBA08",
+      "300": "rgba(255, 186, 8, 0.5)",
+
     }
   },
   fonts: {
@@ -19,7 +25,7 @@ export const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: 'white.50',
+        bg: 'gray.50',
         color: 'gray.700'
       }
     }
