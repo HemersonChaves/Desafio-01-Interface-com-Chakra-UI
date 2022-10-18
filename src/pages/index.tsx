@@ -1,10 +1,11 @@
-import { Center, Flex, Text } from '@chakra-ui/react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import { Box, Center, Flex, Heading, Text } from '@chakra-ui/react';
+
+
 import type { NextPage } from 'next';
 import Banner from '../components/Banner';
 import Header from '../components/Header';
 import Caracteristicas from '../components/Caracteristicas';
+import Slider from '../components/Slider';
 
 const Home: NextPage = () => {
   return (
@@ -12,31 +13,18 @@ const Home: NextPage = () => {
       <Header />
       <Banner />
       <Caracteristicas />
-      <Flex align='center'
-        justify='center'>
-        <Center>
-          <Text fontSize={"3xl"}>Vamos nessa?
-          </Text>
-          <br />
-          <Text fontSize={"3xl"}>
-            Então escolha seu continente
-          </Text>
-        </Center>
-      </Flex>
-      <Flex>
-        <Swiper
-          spaceBetween={50}
-          slidesPerView={3}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
-        >
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          ...
-        </Swiper>
-      </Flex>
+      <Box w={["60px", "90px"]} mx="auto" h="2px" bg="gray.700" my={["9", "20"]}></Box>
+      <Heading
+        textAlign="center"
+        fontWeight="500"
+        fontSize={["lg", "3xl", "4xl"]}
+        mb={["5", "14"]}
+      >
+        Vamos nessa?
+        <br />
+        Então escolha seu continente
+      </Heading>
+      <Slider />
     </Flex>
   )
 }
