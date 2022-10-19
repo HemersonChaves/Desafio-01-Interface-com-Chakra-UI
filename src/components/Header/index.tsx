@@ -1,6 +1,13 @@
-import { Flex, Grid, GridItem, Image } from '@chakra-ui/react';
+import { Flex, Grid, GridItem, Icon, Image } from '@chakra-ui/react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { RiArrowLeftSLine } from "react-icons/ri";
 
 export default function Header() {
+  const { asPath } = useRouter();
+
+  const notHomePage = asPath !== "/";
+
   return (
     <Flex
       bg="white"
@@ -19,18 +26,25 @@ export default function Header() {
         alignItems="center"
         templateColumns="repeat(3, 1fr)"
         justifyContent="center">
-        <GridItem />
         <GridItem >
+          {notHomePage && (
+            <Link href="/">
+              <a>
+                <Icon as={RiArrowLeftSLine} fontSize={[20, 40]} justifySelf="start" />
+              </a>
+            </Link>
+          )}
+        </GridItem>
+        <GridItem >
+
           <Image
             w={["81px", "184px"]}
             alt="Um avião voando sobre o nome da marca World trip"
             src="/Logo.svg"
             justifySelf="center"
-            gridColumn="2"
           />
         </GridItem>
         <GridItem />
-
       </Grid >
     </Flex>
   )
